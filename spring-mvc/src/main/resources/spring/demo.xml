@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--InnerBean-->
+    <bean id="outer" class="com.sxdx.springmvc.entity.Outer">
+        <property name="name" value="我是一个外部bean"></property>
+        <property name="age" value="20"></property>
+        <!--注意这里是property属性，不是beanName-->
+        <property name="inner">
+            <bean class="com.sxdx.springmvc.entity.Inner">
+                <property name="name" value="我是一个内部bean"></property>
+                <property name="age" value="10"></property>
+            </bean>
+        </property>
+    </bean>
+
+</beans>

@@ -1,0 +1,17 @@
+server:
+  port: 8003
+  servlet:
+    context-path: /two
+    session:
+      cookie:
+        name: TWOSESSION
+security:
+  oauth2:
+    client:
+      client-id: client2
+      client-secret: 123456
+      user-authorization-uri: http://127.0.0.1:8001/oauth/authorize
+      access-token-uri: http://127.0.0.1:8001/oauth/token
+    resource:
+      token-info-uri: http://127.0.0.1:8001/oauth/check_token
+      user-info-uri: http://127.0.0.1:8001/authentication

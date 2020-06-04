@@ -1,0 +1,19 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /one
+    session:
+      cookie:
+        name: ONESESSION
+
+security:
+  oauth2:
+    client:
+      client-id: client1
+      client-secret: 123456
+      user-authorization-uri: http://127.0.0.1:8001/oauth/authorize
+      access-token-uri: http://127.0.0.1:8001/oauth/token
+    resource:
+      token-info-uri: http://127.0.0.1:8001/oauth/check_token
+      user-info-uri: http://127.0.0.1:8001/authentication
+
